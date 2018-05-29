@@ -2,6 +2,7 @@ import re
 import json
 import MeCab
 import sys
+#import numpy as np
 from requests_oauthlib import OAuth1Session
 
 
@@ -18,10 +19,10 @@ keyword = args[2]
 
 def main():
 
-
-    tweets = get_tweet()
-    surfaces = get_surfaces(tweets)     #ツイートを分かち書き
-    write_txt(surfaces)                 #ツイートを書き込み
+    for i in range(10):
+      tweets = get_tweet()
+      surfaces = get_surfaces(tweets)     #ツイートを分かち書き
+      write_txt(surfaces)                 #ツイートを書き込み
 
 def get_tweet():
     """
